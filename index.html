@@ -9,10 +9,16 @@
       padding: 0;
       background-color: #000;
     }
-    #iframe-container {
-      width: 100%;
-      min-height: 600px;
-    }
+   #iframe-container {
+    width: 100%;
+    min-height: 600px;
+  }
+  #usefullIframe {
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    display: block;
+  }
   </style>
 </head>
 
@@ -24,7 +30,7 @@
   <div id="iframe-container">
     <iframe
       id="usefullIframe"
-      src="https://usefull.com.au/version-test/booking-widget/support-bite"
+      src="https://usefull.com.au/version-13elp/booking-widget/support-bite"
       frameborder="0"
       style="width: 100%; border: none; overflow: hidden;"
       scrolling="no"
@@ -40,6 +46,25 @@
     checkOrigin: false,
     heightCalculationMethod: 'bodyScroll'
   }, '#usefullIframe');
+</script><div id="iframe-container">
+  <iframe
+    id="usefullIframe"
+    src="https://usefull.com.au/version-test/booking-widget/support-bite"
+    frameborder="0"
+    scrolling="no"
+    allowtransparency="true"
+    allow="payment">
+  </iframe>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.5/iframeResizer.min.js"></script>
+
+<script>
+  iFrameResize({
+    checkOrigin: false,
+    heightCalculationMethod: "bodyScroll",
+    enablePublicMethods: true
+  }, "#usefullIframe");
 </script>
 </body>
 </html>
